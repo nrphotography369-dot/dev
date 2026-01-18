@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev | Creative Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/logo.jpg" alt="Dev Logo">
+                <span>DEV</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Skills</a></li>
+                <li><a href="#workspace">Work Space</a></li>
+                <li><a href="#contact" class="btn">Hire Me</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span class="highlight">Dev</span></h1>
+                    <p class="subtitle">Creative Video Editor, Photo Editor & Graphics Designer</p>
+                    <p class="description">I transform raw ideas into stunning visual stories. Specializing in high-end
+                        video production, professional photo retouching, and premium brand design.</p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn primary">View My Portfolio</a>
+                        <a href="#contact" class="btn secondary">Work With Me</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="assets/profile.jpg" alt="Dev Profile Photo"
+                            onerror="this.src='https://via.placeholder.com/400x400?text=Dev+Creative'">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workspace" class="workspace reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2>Work <span class="highlight">Space</span></h2>
+            </div>
+            <div class="work-container">
+                <div class="work-content">
+                    <div class="work-info">
+                        <span class="work-tag">Automobile Industry</span>
+                        <h3>Worked for Automobile</h3>
+                        <p>Specialized visual content and professional marketing assets designed for the automotive
+                            sector. Showcasing premium vehicle aesthetics and brand identity.</p>
+                    </div>
+                </div>
+                <div class="work-showcase">
+                    <div class="work-card">
+                        <img src="assets/automobile_work.png" alt="Automobile Work Portfolio">
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-container reverse">
+                <div class="work-content">
+                    <div class="work-info">
+                        <span class="work-tag">Jewellery Brand</span>
+                        <h3>Worked for Jewellery Shop</h3>
+                        <p>Elegant and high-end promotional designs for luxury jewellery retailers. Capturing the
+                            brilliance and detail of fine craftmanship for social media presence.</p>
+                    </div>
+                </div>
+                <div class="work-showcase">
+                    <div class="work-card">
+                        <img src="assets/jewellery_work.png" alt="Jewellery Shop Work Portfolio">
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-container">
+                <div class="work-content">
+                    <div class="work-info">
+                        <span class="work-tag">Education Sector</span>
+                        <h3>Worked for Educational Institute</h3>
+                        <p>Engaging and professional visual materials for schools and academies. Creating informative
+                            and inspiring content that resonates with students and parents.</p>
+                    </div>
+                </div>
+                <div class="work-showcase">
+                    <div class="work-card">
+                        <img src="assets/education_work.jpg" alt="Educational Institute Work Portfolio">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact reveal">
+        <div class="container">
+            <div class="contact-card">
+                <div class="contact-header">
+                    <h2>Ready to <span class="highlight">Collaborate?</span></h2>
+                    <p>I'm currently available for professional creative projects. Let's create something extraordinary.
+                    </p>
+                </div>
+                <div class="contact-details">
+                    <a href="tel:7848017524" class="contact-item">
+                        <i data-lucide="phone"></i>
+                        <span>7848017524</span>
+                    </a>
+                    <a href="mailto:d8207182@gmail.com" class="contact-item">
+                        <i data-lucide="mail"></i>
+                        <span>d8207182@gmail.com</span>
+                    </a>
+                    <a href="https://instagram.com/dev_coming_01" target="_blank" class="contact-item">
+                        <i data-lucide="instagram"></i>
+                        <span>@dev_coming_01</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Dev Creative. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Reveal animations on scroll
+        const reveals = document.querySelectorAll('.reveal');
+
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            reveals.forEach(reveal => {
+                const elementTop = reveal.getBoundingClientRect().top;
+                const elementVisible = 100;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        // Initial check
+        revealOnScroll();
+    </script>
+</body>
+
+</html>
